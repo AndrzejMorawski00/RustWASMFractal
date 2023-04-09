@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rust WASM App</title>
+        <link rel="stylesheet" href="./static/style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="img__wrapper">
+                <canvas class="img__canvas" width="500px" height="500"></canvas>
+            </div>
+            <form class="form">
+                <label class="form__item form__label" for="form__size">Iterations:</label>
+                <input class="form__item form__input" type="number" required="true" max="2000" min="0" value="23" id="form__size" />
+                <label class="form__item form__label" for="form__size">Image Size:</label>
+                <input class="form__item form__input" type="number" required="true" max="2048" min="10" value="900" id="form__size" />
+                <label class="form__item form__label" for="form__min_x">Min X:</label>
+                <input class="form__item form__input" type="number" required="true" step="0.001" max="100" min="-100" value="-2.0" placeholder="0" id="form__min_x" />
+                <label class="form__item form__label" for="form__max_x">Max X:</label>
+                <input class="form__item form__input" type="number" required="true" step="0.001" max="100" min="-100" value="0.9" placeholder="0" id="form__max_x" />
+                <label class="form__item form__label" for="form__min_y">Min Y:</label>
+                <input class="form__item form__input" type="number" required="true" step="0.001" max="100" min="-100" value="-1.5" placeholder="0" id="form__min_y" />
+                <label class="form__item form__label" for="form__max_y">Max Y:</label>
+                <input class="form__item form__input" type="number" required="true" step="0.001" max="100" min="-100" value="1.5" placeholder="0" id="form__max_y" />
+                <input class="form__item form__submit" type="submit" value="Generate" />
+            </form>
+        </div>
+        <script type="module" src="./static/index.js"></script>
+    </body>
+</html>
